@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CÔNG TY TNHH TGL TRANS</title>
+    <!-- Tải Tailwind CSS từ CDN để tạo phong cách nhanh chóng và responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Nhập font Inter từ Google Fonts để có giao diện hiện đại và dễ đọc */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Đảm bảo cuộn mượt mà khi nhấp vào các liên kết điều hướng */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Các animation tùy chỉnh */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounceOnce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .animate-bounce-once {
+            animation: bounceOnce 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-blue-50 text-gray-800">
+    <!-- Phần Header - Thanh điều hướng -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <!-- Logo công ty TGL TRANS -->
+            <div class="flex items-center">
+                <!-- Sử dụng placeholder image cho logo. Bạn có thể thay bằng đường dẫn logo thật của công ty. -->
+                <!-- Đã chỉnh sửa kích thước logo từ w-12 h-12 thành w-20 h-20 để lớn hơn và cân đối với header -->
+                <img src="assets/img/logo.jpg" alt="TGL TRANS Logo" class="w-20 h-20 p-1 border border-teal-300 rounded-md">
+            </div>
+            <!-- Các liên kết điều hướng -->
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="text-teal-700 hover:text-teal-900 font-medium transition duration-300">Trang chủ</a></li>
+                <li><a href="#about" class="text-teal-700 hover:text-teal-900 font-medium transition duration-300">Giới thiệu</a></li>
+                <li><a href="#services" class="text-teal-700 hover:text-teal-900 font-medium transition duration-300">Dịch vụ</a></li>
+                <li><a href="#contact" class="text-teal-700 hover:text-teal-900 font-medium transition duration-300">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Phần Hero - Giới thiệu chính -->
+        <section id="home" class="relative bg-gradient-to-r from-teal-600 to-teal-800 text-white py-24 md:py-32 text-center overflow-hidden rounded-b-lg shadow-lg">
+            <!-- Hình nền mờ để tạo hiệu ứng thị giác -->
+            <div class="absolute inset-0 opacity-10" style="background-image: url('https://placehold.co/1920x1080/004d40/ffffff?text=Logistics+Background'); background-size: cover; background-position: center;"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">CÔNG TY TNHH TGL TRANS</h1>
+                <p class="text-lg md:text-xl mb-8 animate-fade-in-up">Giải pháp logistics toàn diện và tin cậy cho doanh nghiệp của bạn.</p>
+                <a href="#contact" class="inline-block bg-white text-teal-700 hover:bg-teal-100 px-8 py-3 rounded-full font-semibold text-lg shadow-lg transition duration-300 transform hover:scale-105 animate-bounce-once">Liên hệ ngay</a>
+            </div>
+        </section>
+
+        <!-- Phần Giới thiệu về chúng tôi -->
+        <section id="about" class="py-16 md:py-24 bg-white rounded-lg shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-teal-700 mb-8">Về chúng tôi</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center text-left">
+                    <div>
+                        <p class="text-lg leading-relaxed mb-4">
+                            CÔNG TY TNHH TGL TRANS tự hào là đối tác logistics đáng tin cậy, mang đến các giải pháp vận chuyển và chuỗi cung ứng tối ưu cho mọi loại hình doanh nghiệp. Với nhiều năm kinh nghiệm trong ngành, chúng tôi cam kết cung cấp dịch vụ chất lượng cao, hiệu quả và an toàn, giúp khách hàng tối ưu hóa hoạt động kinh doanh.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            Đội ngũ chuyên gia của chúng tôi luôn sẵn sàng lắng nghe và đưa ra các giải pháp phù hợp nhất với từng nhu cầu cụ thể, đảm bảo hàng hóa của bạn được vận chuyển đến đúng nơi, đúng lúc và trong tình trạng tốt nhất.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <!-- Placeholder image cho phần "Về chúng tôi" -->
+                        <img src="https://placehold.co/500x300/00796b/ffffff?text=Về+chúng+tôi" alt="About Us Image" class="rounded-lg shadow-lg w-full max-w-md">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần Dịch vụ của chúng tôi -->
+        <section id="services" class="py-16 md:py-24 bg-blue-50 rounded-lg shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-teal-700 mb-12">Dịch vụ của chúng tôi</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Mục Dịch vụ 1: Vận chuyển đường bộ -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2 border border-teal-200">
+                        <div class="text-5xl text-teal-600 mb-4">🚚</div> <!-- Icon xe tải -->
+                        <h3 class="text-2xl font-semibold text-teal-700 mb-3">Vận chuyển đường bộ</h3>
+                        <p class="text-gray-600 leading-relaxed">Cung cấp dịch vụ vận chuyển hàng hóa bằng đường bộ nhanh chóng, an toàn và hiệu quả, với đội xe đa dạng và mạng lưới rộng khắp.</p>
+                    </div>
+                    <!-- Mục Dịch vụ 2: Vận chuyển đường biển -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2 border border-teal-200">
+                        <div class="text-5xl text-teal-600 mb-4">🚢</div> <!-- Icon tàu thủy -->
+                        <h3 class="text-2xl font-semibold text-teal-700 mb-3">Vận chuyển đường biển</h3>
+                        <p class="text-gray-600 leading-relaxed">Giải pháp vận tải biển toàn diện cho hàng hóa xuất nhập khẩu, đảm bảo lịch trình ổn định và giá cước cạnh tranh.</p>
+                    </div>
+                    <!-- Mục Dịch vụ 3: Vận chuyển đường hàng không -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2 border border-teal-200">
+                        <div class="text-5xl text-teal-600 mb-4">✈️</div> <!-- Icon máy bay -->
+                        <h3 class="text-2xl font-semibold text-teal-700 mb-3">Vận chuyển đường hàng không</h3>
+                        <p class="text-gray-600 leading-relaxed">Dịch vụ vận chuyển hàng không tốc độ cao, đáp ứng mọi nhu cầu khẩn cấp với kết nối toàn cầu và thủ tục đơn giản.</p>
+                    </div>
+                    <!-- Mục Dịch vụ 4: Dịch vụ kho bãi -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2 border border-teal-200">
+                        <div class="text-5xl text-teal-600 mb-4">📦</div> <!-- Icon hộp/thùng hàng -->
+                        <h3 class="text-2xl font-semibold text-teal-700 mb-3">Dịch vụ kho bãi</h3>
+                        <p class="text-gray-600 leading-relaxed">Hệ thống kho bãi hiện đại, đạt chuẩn, cung cấp giải pháp lưu trữ và quản lý hàng hóa thông minh, an toàn.</p>
+                    </div>
+                    <!-- Mục Dịch vụ 5: Khai báo hải quan -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2 border border-teal-200">
+                        <div class="text-5xl text-teal-600 mb-4">📝</div> <!-- Icon tài liệu/giấy tờ -->
+                        <h3 class="text-2xl font-semibold text-teal-700 mb-3">Khai báo hải quan</h3>
+                        <p class="text-gray-600 leading-relaxed">Đội ngũ chuyên nghiệp hỗ trợ toàn diện các thủ tục hải quan, giúp hàng hóa thông quan nhanh chóng và đúng quy định.</p>
+                    </div>
+                    <!-- Mục Dịch vụ 6: Giải pháp chuỗi cung ứng -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2 border border-teal-200">
+                        <div class="text-5xl text-teal-600 mb-4">🔗</div> <!-- Icon chuỗi/liên kết -->
+                        <h3 class="text-2xl font-semibold text-teal-700 mb-3">Giải pháp chuỗi cung ứng</h3>
+                        <p class="text-gray-600 leading-relaxed">Tối ưu hóa toàn bộ chuỗi cung ứng của bạn từ đầu đến cuối, giảm chi phí và tăng hiệu quả hoạt động.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần Liên hệ với chúng tôi -->
+        <section id="contact" class="py-16 md:py-24 bg-white rounded-lg shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-teal-700 mb-8">Liên hệ với chúng tôi</h2>
+                <div class="grid md:grid-cols-2 gap-12 text-left">
+                    <div class="flex flex-col justify-center">
+                        <p class="text-lg mb-4 flex items-center"><span class="font-semibold text-teal-700 mr-2">Điện thoại:</span> <a href="tel:[Số điện thoại của bạn]" class="text-gray-800 hover:text-teal-700 transition duration-300">[Số điện thoại của bạn]</a></p>
+                        <p class="text-lg mb-4 flex items-center"><span class="font-semibold text-teal-700 mr-2">Email:</span> <a href="mailto:[Email của bạn]" class="text-gray-800 hover:text-teal-700 transition duration-300">[Email của bạn]</a></p>
+                        <p class="text-lg mb-4"><span class="font-semibold text-teal-700">Giờ làm việc:</span> Thứ Hai - Thứ Sáu: 8:00 AM - 5:00 PM</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center p-4 bg-teal-50 rounded-lg shadow-inner">
+                        <h3 class="text-2xl font-semibold text-teal-700 mb-4">Kết nối với chúng tôi</h3>
+                        <div class="flex space-x-6">
+                            <!-- Icon Facebook -->
+                            <a href="https://www.facebook.com/yangchan.1110" target="_blank" class="text-teal-600 hover:text-teal-800 transition duration-300 transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.353c-.597 0-.647.25-.647.737v1.107h2l-.307 2.175h-1.693v6.125h-3v-6.125h-1.689v-2.175h1.689v-1.52c0-1.634.962-2.737 2.895-2.737h1.754v2.001z"/></svg>
+                            </a>
+                            <!-- Icon Zalo -->
+                            <a href="https://zalo.me/[Số điện thoại Zalo của bạn]" target="_blank" class="text-teal-600 hover:text-teal-800 transition duration-300 transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.32 12.82c-.22.22-.52.33-.82.33-.3 0-.6-.11-.82-.33l-1.6-1.6c-.1-.1-.2-.1-.3-.1s-.2.0-.3.1l-1.6 1.6c-.22.22-.52.33-.82.33-.3 0-.6-.11-.82-.33-.44-.44-.44-1.15 0-1.59l1.6-1.6c.1-.1.1-.2.1-.3s-.0-.2-.1-.3l-1.6-1.6c-.44-.44-.44-1.15 0-1.59.22-.22.52-.33.82-.33.3 0 .6.11.82.33l1.6 1.6c.1.1.2.1.3.1s.2-.0.3-.1l1.6-1.6c.22-.22.52-.33.82-.33.3 0 .6.11.82.33.44.44.44 1.15 0 1.59l-1.6 1.6c-.1.1-.1.2-.1.3s.0.2.1.3l1.6 1.6c.44.44.44 1.15 0 1.59z"/>
+                                </svg>
+                            </a>
+                            <!-- Icon Điện thoại -->
+                            <a href="tel:[Số điện thoại của bạn]" class="text-teal-600 hover:text-teal-800 transition duration-300 transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M20 22.05c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Phần Footer - Chân trang -->
+    <footer class="bg-teal-800 text-white py-8 mt-8 rounded-t-lg shadow-inner">
+        <div class="container mx-auto text-center px-4">
+            <p>&copy; 2025 CÔNG TY TNHH TGL TRANS. Mọi bản quyền được bảo lưu.</p>
+            <div class="flex justify-center space-x-6 mt-4 text-3xl">
+                <!-- Các liên kết mạng xã hội với biểu tượng SVG -->
+                <a href="https://www.facebook.com/yangchan.1110" target="_blank" class="text-white hover:text-teal-200 transition duration-300 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.353c-.597 0-.647.25-.647.737v1.107h2l-.307 2.175h-1.693v6.125h-3v-6.125h-1.689v-2.175h1.689v-1.52c0-1.634.962-2.737 2.895-2.737h1.754v2.001z"/></svg>
+                </a>
+                <a href="https://zalo.me/0343599380" target="_blank" class="text-white hover:text-teal-200 transition duration-300 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.32 12.82c-.22.22-.52.33-.82.33-.3 0-.6-.11-.82-.33l-1.6-1.6c-.1-.1-.2-.1-.3-.1s-.2.0-.3.1l-1.6 1.6c-.22.22-.52.33-.82.33-.3 0-.6-.11-.82-.33-.44-.44-.44-1.15 0-1.59l1.6-1.6c.1-.1.1-.2.1-.3s-.0-.2-.1-.3l-1.6-1.6c-.44-.44-.44-1.15 0-1.59.22-.22.52-.33.82-.33.3 0 .6.11.82.33l1.6 1.6c.1.1.2.1.3.1s.2-.0.3-.1l1.6-1.6c.22-.22.52-.33.82-.33.3 0 .6.11.82.33.44.44.44 1.15 0 1.59l-1.6 1.6c-.1.1-.1.2-.1.3s.0.2.1.3l1.6 1.6c.44.44.44 1.15 0 1.59z"/>
+                    </svg>
+                </a>
+                <a href="tel:0343599380" class="text-white hover:text-teal-200 transition duration-300 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M20 22.05c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
