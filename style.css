@@ -1,0 +1,39 @@
+/* Nhập font Inter từ Google Fonts để có giao diện hiện đại và dễ đọc */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Đảm bảo cuộn mượt mà khi nhấp vào các liên kết điều hướng */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Các animation tùy chỉnh */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceOnce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-bounce-once {
+    animation: bounceOnce 0.5s ease-in-out;
+}
