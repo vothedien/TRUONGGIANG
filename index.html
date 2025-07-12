@@ -6,39 +6,8 @@
     <title>CÔNG TY TNHH TGL TRANS</title>
     <!-- Tải Tailwind CSS từ CDN để tạo phong cách nhanh chóng và responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Nhập font Inter từ Google Fonts để có giao diện hiện đại và dễ đọc */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Đảm bảo cuộn mượt mà khi nhấp vào các liên kết điều hướng */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Các animation tùy chỉnh */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes bounceOnce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-        .animate-fade-in-down {
-            animation: fadeInDown 1s ease-out forwards;
-        }
-        .animate-fade-in-up {
-            animation: fadeInUp 1s ease-out forwards;
-        }
-        .animate-bounce-once {
-            animation: bounceOnce 0.5s ease-in-out;
-        }
-    </style>
+    <!-- Liên kết đến tệp CSS riêng -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-blue-50 text-gray-800">
     <!-- Phần Header - Thanh điều hướng -->
@@ -48,7 +17,7 @@
             <div class="flex items-center">
                 <!-- Sử dụng placeholder image cho logo. Bạn có thể thay bằng đường dẫn logo thật của công ty. -->
                 <!-- Đã chỉnh sửa kích thước logo từ w-12 h-12 thành w-20 h-20 để lớn hơn và cân đối với header -->
-                <img src="logo.jpg" alt="TGL TRANS Logo" class="w-20 h-20 ">
+                <img src="logo.jpg" alt="TGL TRANS Logo" class="w-20 h-20">
             </div>
             <!-- Các liên kết điều hướng -->
             <ul class="flex space-x-6">
@@ -64,7 +33,7 @@
         <!-- Phần Hero - Giới thiệu chính -->
         <section id="home" class="relative bg-gradient-to-r from-teal-600 to-teal-800 text-white py-24 md:py-32 text-center overflow-hidden rounded-b-lg shadow-lg">
             <!-- Hình nền mờ để tạo hiệu ứng thị giác -->
-            <div class="absolute inset-0 opacity-10" style="background-image: url('https://placehold.co/1920x1080/004d40/ffffff?text=Logistics+Background'); background-size: cover; background-position: center;"></div>
+            <div class="absolute inset-0 opacity-10" style="background-image: url('https://placehold.co/1920x1080/004d40/ffffff?text=Trường Giang+logistics'); background-size: cover; background-position: center;"></div>
             <div class="container mx-auto px-4 relative z-10">
                 <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">CÔNG TY TNHH TGL TRANS</h1>
                 <p class="text-lg md:text-xl mb-8 animate-fade-in-up">Giải pháp logistics toàn diện và tin cậy cho doanh nghiệp của bạn.</p>
@@ -87,7 +56,7 @@
                     </div>
                     <div class="flex justify-center">
                         <!-- Placeholder image cho phần "Về chúng tôi" -->
-                        <img src="https://placehold.co/500x300/00796b/ffffff?text=Về+chúng+tôi" alt="About Us Image" class="rounded-lg shadow-lg w-full max-w-md">
+                        <img src="vechungtoi.jpg" alt="About Us Image" class="rounded-lg shadow-lg w-full max-w-md">
                     </div>
                 </div>
             </div>
@@ -144,9 +113,9 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-teal-700 mb-8">Liên hệ với chúng tôi</h2>
                 <div class="grid md:grid-cols-2 gap-12 text-left">
                     <div class="flex flex-col justify-center">
-                        <p class="text-lg mb-4 flex items-center"><span class="font-semibold text-teal-700 mr-2">Điện thoại:</span> <a href="tel:[Số điện thoại của bạn]" class="text-gray-800 hover:text-teal-700 transition duration-300">[Số điện thoại của bạn]</a></p>
-                        <p class="text-lg mb-4 flex items-center"><span class="font-semibold text-teal-700 mr-2">Email:</span> <a href="mailto:[Email của bạn]" class="text-gray-800 hover:text-teal-700 transition duration-300">[Email của bạn]</a></p>
-                        <p class="text-lg mb-4"><span class="font-semibold text-teal-700">Giờ làm việc:</span> Thứ Hai - Thứ Sáu: 8:00 AM - 5:00 PM</p>
+                        <p class="text-lg mb-4 flex items-center"><span class="font-semibold text-teal-700 mr-2">Điện thoại:</span> <a href="tel:0343599380" class="text-gray-800 hover:text-teal-700 transition duration-300">0343599380</a></p>
+                        <p class="text-lg mb-4 flex items-center"><span class="font-semibold text-teal-700 mr-2">Email:</span> <a href="mailto:[Email của bạn]" class="text-gray-800 hover:text-teal-700 transition duration-300">E meo</a></p>
+                        <p class="text-lg mb-4"><span class="font-semibold text-teal-700">Giờ làm việc:</span> FULLTIME</p>
                     </div>
                     <div class="flex flex-col justify-center items-center p-4 bg-teal-50 rounded-lg shadow-inner">
                         <h3 class="text-2xl font-semibold text-teal-700 mb-4">Kết nối với chúng tôi</h3>
@@ -155,14 +124,14 @@
                             <a href="https://www.facebook.com/yangchan.1110" target="_blank" class="text-teal-600 hover:text-teal-800 transition duration-300 transform hover:scale-110">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.353c-.597 0-.647.25-.647.737v1.107h2l-.307 2.175h-1.693v6.125h-3v-6.125h-1.689v-2.175h1.689v-1.52c0-1.634.962-2.737 2.895-2.737h1.754v2.001z"/></svg>
                             </a>
-                            <!-- Icon Zalo -->
-                            <a href="https://zalo.me/[Số điện thoại Zalo của bạn]" target="_blank" class="text-teal-600 hover:text-teal-800 transition duration-300 transform hover:scale-110">
+                            <!-- Icon Zalo (đã cập nhật) -->
+                            <a href="https://zalo.me/0343599380" target="_blank" class="text-teal-600 hover:text-teal-800 transition duration-300 transform hover:scale-110">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.32 12.82c-.22.22-.52.33-.82.33-.3 0-.6-.11-.82-.33l-1.6-1.6c-.1-.1-.2-.1-.3-.1s-.2.0-.3.1l-1.6 1.6c-.22.22-.52.33-.82.33-.3 0-.6-.11-.82-.33-.44-.44-.44-1.15 0-1.59l1.6-1.6c.1-.1.1-.2.1-.3s-.0-.2-.1-.3l-1.6-1.6c-.44-.44-.44-1.15 0-1.59.22-.22.52-.33.82-.33.3 0 .6.11.82.33l1.6 1.6c.1.1.2.1.3.1s.2-.0.3-.1l1.6-1.6c.22-.22.52-.33.82-.33.3 0 .6.11.82.33.44.44.44 1.15 0 1.59l-1.6 1.6c-.1.1-.1.2-.1.3s.0.2.1.3l1.6 1.6c.44.44.44 1.15 0 1.59z"/>
+                                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
                                 </svg>
                             </a>
                             <!-- Icon Điện thoại -->
-                            <a href="tel:[Số điện thoại của bạn]" class="text-teal-600 hover:text-teal-800 transition duration-300 transform hover:scale-110">
+                            <a href="tel:0343599380" class="text-teal-600 hover:text-teal-800 transition duration-300 transform hover:scale-110">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M20 22.05c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2z"/></svg>
                             </a>
                         </div>
@@ -183,14 +152,19 @@
                 </a>
                 <a href="https://zalo.me/0343599380" target="_blank" class="text-white hover:text-teal-200 transition duration-300 transform hover:scale-110">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.32 12.82c-.22.22-.52.33-.82.33-.3 0-.6-.11-.82-.33l-1.6-1.6c-.1-.1-.2-.1-.3-.1s-.2.0-.3.1l-1.6 1.6c-.22.22-.52.33-.82.33-.3 0-.6-.11-.82-.33-.44-.44-.44-1.15 0-1.59l1.6-1.6c.1-.1.1-.2.1-.3s-.0-.2-.1-.3l-1.6-1.6c-.44-.44-.44-1.15 0-1.59.22-.22.52-.33.82-.33.3 0 .6.11.82.33l1.6 1.6c.1.1.2.1.3.1s.2-.0.3-.1l1.6-1.6c.22-.22.52-.33.82-.33.3 0 .6.11.82.33.44.44.44 1.15 0 1.59l-1.6 1.6c-.1.1-.1.2-.1.3s.0.2.1.3l1.6 1.6c.44.44.44 1.15 0 1.59z"/>
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
                     </svg>
                 </a>
                 <a href="tel:0343599380" class="text-white hover:text-teal-200 transition duration-300 transform hover:scale-110">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M20 22.05c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2zm0-4c-1.395 0-2.735-.412-3.87-1.18l-2.07-1.38c-.46-.307-.74-.46-1.04-.46-.3 0-.58.153-1.04.46l-2.07 1.38c-1.135.768-2.475 1.18-3.87 1.18-2.206 0-4-.895-4-2s1.794-2 4-2c.69 0 1.34.12 1.95.34l.05.02c.07.02.14.03.21.03.07 0 .14-.01.21-.03l.05-.02c.61-.22 1.26-.34 1.95-.34 2.206 0 4 .895 4 2s-1.794 2-4 2z"/></svg>
-                </a>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </section>
+    </main>
+
+   
 </body>
 </html>
