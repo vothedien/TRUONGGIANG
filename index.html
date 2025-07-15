@@ -340,7 +340,111 @@
       max-width: 100%;
       justify-content: center;
     }
+    .nav-mobile-toggle {
+  display: none;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-mobile {
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+.nav-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-mobile ul li {
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+}
+
+.nav-mobile ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
   }
+
+  .nav-mobile-toggle {
+    display: block;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+}
+  }
+  @media (max-width: 768px) {
+  .logo img {
+    height: 50px;
+  }
+
+  .hotline {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .pricing {
+    padding: 40px 20px;
+  }
+
+  .services {
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    height: 60px;
+  }
+
+  .partner-title {
+    font-size: 20px;
+  }
+
+  .partner-carousel {
+    flex-direction: column;
+  }
+
+  .partner-arrow {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .nav-mobile-toggle {
+    display: none !important;
+  }
+
+  .nav-mobile {
+    display: none !important;
+  }
+}
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -367,6 +471,18 @@
 
       <i class="fas fa-search search-icon"></i>
     </nav>
+    <div class="nav-mobile-toggle" onclick="toggleMobileMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+<nav class="nav-mobile hidden" id="mobileMenu">
+  <ul>
+    <li><a href="#gioi-thieu">GIỚI THIỆU</a></li>
+    <li><a href="#dich-vu">DỊCH VỤ</a></li>
+    <li><a href="#uu-diem">ƯU ĐIỂM</a></li>
+    <li><a href="#bang-gia">BẢNG GIÁ</a></li>
+    <li><a href="#lien-he">LIÊN HỆ</a></li>
+  </ul>
+</nav>
   </header>
 
   <section class="hero" id="gioi-thieu">
@@ -507,6 +623,10 @@
     const scrollAmount = 200;
     container.scrollLeft += direction * scrollAmount;
   }
+  function toggleMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('hidden');
+}
 </script>
 </body>
 </html>
