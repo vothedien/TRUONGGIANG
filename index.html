@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TGL Transport & Logistics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     html {
   scroll-behavior: smooth;
 }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+   body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
     .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px 40px; /* tăng padding để cao hơn */
+}
     .logo {
       padding: 10px 30px;
     }
@@ -164,84 +166,120 @@
       cursor: pointer;
       font-weight: bold;
     }
-     .banggia-container {
-    border: 2px solid #007bff;
-    margin: 40px auto;
-    max-width: 1200px;
-    background: #fff;
-  }
 
-  .banggia-tabs {
-    display: flex;
-    justify-content: space-around;
-    background-color: #007bff;
-  }
-
-  .banggia-tabs .tab {
-    flex: 1;
-    padding: 15px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .banggia-tabs .tab.active {
-    background-color: #f1c40f;
-    color: black;
-  }
-
-  .banggia-content {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .banggia-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
 
   .hidden {
     display: none;
   }
-   .footer {
-    background-color: #ffffff;
-    padding: 20px 40px;
-    border-top: 4px solid #030613;
-  }
+   .footer-new {
+  background-color: #0d1a8a;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
 
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-  }
+.footer-top {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 20px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    flex: 1;
-    min-width: 250px;
-  }
+.footer-logo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  .footer-logo {
-    height: 100px;
-  }
+.footer-logo {
+  height: 60px;
+}
 
-  .footer-center p {
-    margin: 5px 0;
-    color: #333;
-  }
+.newsletter-box {
+  margin-top: 10px;
+}
 
-  .footer-right p {
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #222;
-  }
+.newsletter-form {
+  display: flex;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+
+.newsletter-form input {
+  border: none;
+  outline: none;
+  flex: 1;
+  background: transparent;
+  font-family: inherit;
+}
+
+.newsletter-form button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-middle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+  background-color: #0d1a8a;
+  color: white;
+  justify-content: space-between;
+}
+
+.footer-column {
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-bottom {
+  padding: 20px 40px;
+  background-color: #08105c;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.footer-new a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-new a:hover {
+  text-decoration: underline; 
+}
+.social-icons i {
+  margin-left: 10px;
+  cursor: pointer;
+}
 
   .newsletter {
     display: flex;
@@ -598,7 +636,6 @@
   <li><a href="#gioi-thieu">GIỚI THIỆU</a></li>
 <li><a href="#dich-vu">DỊCH VỤ</a></li>
 <li><a href="#uu-diem">ƯU ĐIỂM</a></li>
-<li><a href="#bang-gia">BẢNG GIÁ</a></li>
 <li><a href="#lien-he">LIÊN HỆ</a></li>
 </ul>
 
@@ -616,7 +653,6 @@
     <li><a href="#gioi-thieu">GIỚI THIỆU</a></li>
     <li><a href="#dich-vu">DỊCH VỤ</a></li>
     <li><a href="#uu-diem">ƯU ĐIỂM</a></li>
-    <li><a href="#bang-gia">BẢNG GIÁ</a></li>
     <li><a href="#lien-he">LIÊN HỆ</a></li>
   </ul>
 </nav>
@@ -683,21 +719,7 @@
       </div>
     </div>
   </section>
-  <section id="bang-gia">
-    <div class="banggia-container">
-      <div class="banggia-tabs">
-        <div class="tab active" onclick="showImage('my')">Bảng giá gửi hàng đi Mỹ</div>
-        <div class="tab" onclick="showImage('uc')">Bảng giá gửi hàng đi Úc</div>
-        <div class="tab" onclick="showImage('canada')">Bảng giá gửi hàng đi Canada</div>
-      </div>
 
-      <div class="banggia-content">
-        <img id="img-my" class="banggia-img" src="banggiamy.jpg" alt="Bảng giá Mỹ">
-        <img id="img-uc" class="banggia-img hidden" src="banggiauc.jpg" alt="Bảng giá Úc">
-        <img id="img-canada" class="banggia-img hidden" src="banggiacanad.jpg" alt="Bảng giá Canada">
-      </div>
-    </div>
-  </section>
 <div class="partner-wrapper">
   <h2 class="partner-title">Đối tác của <br> TGL TRANSPORT:</h2>
   <div class="partner-carousel">
@@ -715,46 +737,85 @@
     <button class="partner-arrow right" onclick="scrollPartner(1)">&#10095;</button>
   </div>
 </div>
-  <footer class="footer" id="lien-he">
-  <div class="footer-container">
-    <!-- Logo -->
-    <div class="footer-left">
-  <a href="#">
-    <img src="logo.jpg" alt="Logo" class="footer-logo">
-  </a>
-</div>
-
-    <!-- Thông tin liên hệ -->
-    <div class="footer-center">
-      <p><strong>Email:</strong> infotglexp@gmail.com</p>
-      <p><strong>Whatsapp:</strong> 0343599380</p>
-      <p>Built in Ho Chi Minh</p>
+<footer class="footer-new">
+  <div class="footer-top">
+    <div class="footer-logo-info">
+      <img src="logo.jpg" alt="KITEWAY EXPRESS" class="footer-logo">
+      <div class="footer-contact-top">
+        <p><strong>Email:</strong> infotglexp@gmail.com</p>
+        <p><strong>Whatsapp:</strong> 0343599380</p>
+        <p>Built in Ho Chi Minh</p>
+      </div>
     </div>
+  </div>
 
+  <div class="footer-middle">
+    <div class="footer-column">
+      <h4>Dịch vụ</h4>
+      <ul>
+        <li><a href="#">Mở tài khoản DHL</a></li>
+        <li><a href="#">Gửi hàng hóa quốc tế</a></li>
+        <li><a href="#">Thông quan hàng nhập</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Về TGL TRANSPORT</h4>
+      <ul>
+        <li><a href="#gioi-thieu">Giới thiệu</a></li>
+        <li><a href="#dich-vu">Dịch vụ</a></li>
+        <li><a href="#ho-tro">Hỗ trợ</a></li>
+        <li><a href="#tin-tuc">Tin tức Sự kiện</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Ưu đãi</h4>
+      <ul>
+        <li><a href="#">Tư vấn dịch vụ</a></li>
+        <li><a href="#">Lịch bay tháng 03.2025</a></li>
+        <li><a href="#">Thanh toán trên App</a></li>
+        <li><a href="#">Hướng dẫn đặt hàng</a></li>
+        <li><a href="#">Ưu đãi dành cho đại lý</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Chính sách</h4>
+      <ul>
+        <li><a href="#">Chính Sách Bảo Hành</a></li>
+        <li><a href="#">Chính Sách Đổi Trả</a></li>
+        <li><a href="#">Chính Sách Vận Chuyển</a></li>
+        <li><a href="#">Chính Sách Thanh Toán</a></li>
+        <li><a href="#">Chính Sách Bảo Mật</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4 id="#lien-he">Thông tin liên hệ</h4>
+      <ul>
+        <li><strong>Kho Hàng:</strong></li>
+        <li>Địa Chỉ: 67B Đường T5, P. Tây Thạnh, Q. Tân Phú, TP HCM</li>
+        <li>Hotline: 0854936505 (Mr.Hưng)</li>
+        <li>Email: <a href="mailto:inforinfotglexp@gmail.com">infotglexp@gmail.com</a></li>
+        <li>Website: <a href="https://kitewayexpress.com" target="_blank">www.kitewayexpress.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-bar">
+      <span>© 2025 by <strong>TGL TRANSPORT</strong>. All Rights Reserved.</span>
+      <span>Design by theneid | Sitemaps</span>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/tgltrans/"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/tgltrans/"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/tgltrans/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/tgltrans/"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
   </div>
 </footer>
-  <script>
-  function showImage(type) {
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
 
-    if (type === 'my') {
-      document.getElementById('img-my').classList.remove('hidden');
-      document.getElementById('img-uc').classList.add('hidden');
-      document.getElementById('img-canada').classList.add('hidden');
-      tabs[0].classList.add('active');
-    } else if (type === 'uc') {
-      document.getElementById('img-my').classList.add('hidden');
-      document.getElementById('img-uc').classList.remove('hidden');
-      document.getElementById('img-canada').classList.add('hidden');
-      tabs[1].classList.add('active');
-    } else if (type === 'canada') {
-      document.getElementById('img-my').classList.add('hidden');
-      document.getElementById('img-uc').classList.add('hidden');
-      document.getElementById('img-canada').classList.remove('hidden');
-      tabs[2].classList.add('active');
-    }
-  }
+
+  <script>
+
   function scrollPartner(direction) {
     const container = document.getElementById('partnerSlider');
     const scrollAmount = 200;
