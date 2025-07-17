@@ -6,615 +6,443 @@
   <title>TGL Transport & Logistics</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    html {
+  /* Thiết lập chung */
+html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 16px;
 }
-   body {
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-    .header {
+
+/* Header */
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 20px 40px; /* tăng padding để cao hơn */
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
 }
-    .logo {
-      padding: 10px 30px;
-    }
-    .logo img {
-      height: 80px;
-    }
-    .hotline {
-      display: flex;
-      align-items: center;
-      background-color: #f2f6fb;
-      padding: 10px 30px;
-    }
-    .hotline i {
-      font-size: 28px;
-      margin-right: 10px;
-      color: #1e2a78;
-    }
-    .hotline-info {
-      display: flex;
-      flex-direction: column;
-    }
-    .hotline-number {
-      color: #1e2a78;
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .hotline-label {
-      color: #888;
-      font-weight: bold;
-    }
-    .nav-desktop {
-      flex-grow: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 0 30px;
-    }
-    .nav-desktop ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      padding: 0;
-      margin: 0;
-    }
-    .nav-desktop ul li {
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-    .nav-desktop ul li:hover {
-      color: red;
-    }
-    .search-icon {
-      font-size: 18px;
-      margin-left: 15px;
-      cursor: pointer;
-    }
-    .hero {
-      background-color: #345678;
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin: 0;
-    }
-    .hero h2 {
-      font-size: 24px;
-      margin-top: 10px;
-    }
-    .pricing {
-      background-color: #f5f9ff;
-      padding: 60px 40px;
-      text-align: center;
-    }
-    .pricing h2 {
-      font-size: 32px;
-      color: #1e2a78;
-      margin-bottom: 40px;
-    }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-    }
-    .pricing-box {
-      background: #fff;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      text-align: left;
-    }
-    .pricing-box img {
-      height: 64px;
-      margin-bottom: 10px;
-    }
-    .pricing-box h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-    .pricing-box p {
-      font-size: 14px;
-      color: #444;
-    }
-    .services {
-      padding: 60px 40px;
-      text-align: center;
-    }
-    .services h2 {
-      font-size: 32px;
-      color: #1e2a78;
-      margin-bottom: 40px;
-    }
-    .service-grid {
-      display: flex;
-      gap: 40px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .service-box {
-      max-width: 350px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .service-box img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .service-box h3 {
-      margin: 15px 0 10px;
-    }
-    .service-box button {
-      margin-bottom: 20px;
-      padding: 10px 20px;
-      border: none;
-      background-color: #1e2a78;
-      color: #fff;
-      border-radius: 25px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+.logo {
+  padding: 0.5rem 1.5rem;
+}
+.logo img {
+  height: 10vw;
+  max-height: 160px;
+}
 
+/* Hotline */
+.hotline {
+  display: flex;
+  align-items: center;
+  background-color: #f2f6fb;
+  padding: 0.5rem 1.5rem;
+}
+.hotline i {
+  font-size: 1.75rem;
+  margin-right: 0.625rem;
+  color: #1e2a78;
+}
+.hotline-info {
+  display: flex;
+  flex-direction: column;
+}
+.hotline-number {
+  color: #1e2a78;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.hotline-label {
+  color: #888;
+  font-weight: bold;
+}
 
-  .hidden {
-    display: none;
-  }
-   .footer-new {
+/* Nav */
+.nav-desktop {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+.nav-desktop ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.nav-desktop ul li {
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.nav-desktop ul li:hover {
+  color: red;
+}
+.nav-desktop ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+.search-icon {
+  font-size: 1.125rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background-color: #345678;
+  color: white;
+  padding: 6vw 3vw;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3.5vw;
+  margin: 0;
+}
+.hero h2 {
+  font-size: 1.5vw;
+  margin-top: 0.625rem;
+}
+
+/* Pricing */
+.pricing {
+  background-color: #f5f9ff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.pricing h2 {
+  font-size: 2rem;
+  color: #1e2a78;
+  margin-bottom: 2.5rem;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.pricing-box {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+.pricing-box img {
+  height: 4rem;
+  margin-bottom: 0.625rem;
+}
+.pricing-box h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+.pricing-box p {
+  font-size: 0.875rem;
+  color: #444;
+}
+
+/* Services */
+.services {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.services h2 {
+  font-size: 2rem;
+  color: #1e2a78;
+  margin-bottom: 2.5rem;
+}
+.service-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service-box {
+  max-width: 350px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.service-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.service-box h3 {
+  margin: 1rem 0 0.625rem;
+}
+.service-box button {
+  margin-bottom: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  background-color: #1e2a78;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Partner Section */
+.partner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.25rem;
+  background-color: white;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.partner-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e2a78;
+  max-width: 300px;
+  text-align: left;
+  margin: 0;
+}
+.partner-carousel {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  overflow: hidden;
+  max-width: 80%;
+  flex: 1;
+}
+.partner-logos {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.partner-logos img {
+  height: 60px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background-color: white;
+  padding: 6px 12px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+}
+.partner-arrow {
+  border: none;
+  background-color: #eee;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.2s;
+}
+.partner-arrow:hover {
+  background-color: #ddd;
+}
+
+/* Footer */
+.footer-new {
   background-color: #0d1a8a;
   color: white;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
-
 .footer-top {
   background-color: #f5f5f5;
   color: #000;
-  padding: 20px 40px;
+  padding: 1.25rem 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
 }
-
 .footer-logo-info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 }
-
 .footer-logo {
   height: 60px;
 }
-
-.newsletter-box {
-  margin-top: 10px;
-}
-
 .newsletter-form {
   display: flex;
   border-bottom: 1px solid #000;
   padding-bottom: 5px;
 }
-
 .newsletter-form input {
   border: none;
   outline: none;
   flex: 1;
   background: transparent;
-  font-family: inherit;
 }
-
 .newsletter-form button {
   background: none;
   border: none;
   font-weight: bold;
   cursor: pointer;
 }
-
 .footer-middle {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  padding: 40px;
+  gap: 2rem;
+  padding: 2.5rem;
   background-color: #0d1a8a;
   color: white;
   justify-content: space-between;
 }
-
 .footer-column {
   min-width: 200px;
 }
-
 .footer-column h4 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
-
 .footer-column ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
-
 .footer-column ul li {
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
 }
-
+.footer-new a {
+  color: white;
+  text-decoration: none;
+}
+.footer-new a:hover {
+  text-decoration: underline;
+}
 .footer-bottom {
-  padding: 20px 40px;
+  padding: 1.25rem 2rem;
   background-color: #08105c;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #ccc;
 }
-
 .footer-bottom-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 10px;
-}
-.footer-new a {
-  color: white;
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-}
-
-.footer-new a:hover {
-  text-decoration: underline; 
 }
 .social-icons i {
-  margin-left: 10px;
+  margin-left: 0.625rem;
   cursor: pointer;
 }
 
-  .newsletter {
-    display: flex;
-    border-bottom: 1px solid #222;
-    padding-bottom: 5px;
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header,
+  .hotline,
+  .hero,
+  .pricing,
+  .services,
+  .partner-wrapper,
+  .footer-middle {
+    padding: 1.25rem;
   }
 
-  .newsletter input {
-    border: none;
-    flex: 1;
-    outline: none;
-    background: transparent;
-    font-size: 14px;
-    color: #333;
+  .logo img {
+    height: 50px;
   }
 
-  .newsletter button {
-    background: none;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    color: #222;
+  .hero h1 {
+    font-size: 1.75rem;
   }
-  .nav-desktop ul li a {
-  text-decoration: none;
-  color: inherit;
-}
- .partner-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    background-color: white;
-    gap: 20px;
-    flex-wrap: wrap;
+
+  .hero h2 {
+    font-size: 1rem;
   }
 
   .partner-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #1e2a78;
-    max-width: 300px;
-    text-align: left;
-    margin: 0;
+    font-size: 1.25rem;
+    text-align: center;
+    width: 100%;
   }
 
   .partner-carousel {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    overflow: hidden;
-    max-width: 80%;
-    flex: 1;
-  }
-
-  .partner-logos {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-  }
-
-  .partner-logos img {
-    height: 60px;
-    border-radius: 10px;
-    flex-shrink: 0;
-    background-color: white;
-    padding: 6px 12px;
-    box-shadow: 0 0 4px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
+    flex-direction: column;
+    max-width: 100%;
   }
 
   .partner-arrow {
-    border: none;
-    background-color: #eee;
-    border-radius: 50%;
-    font-size: 20px;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    color: #333;
-    transition: background 0.2s;
+    display: none;
   }
 
-  .partner-arrow:hover {
-    background-color: #ddd;
-  }
-
-  @media (max-width: 768px) {
-    .partner-title {
-      text-align: center;
-      width: 100%;
-    }
-
-    .partner-carousel {
-      max-width: 100%;
-      justify-content: center;
-    }
-    .nav-mobile-toggle {
-  display: none;
-  padding: 10px 20px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.nav-mobile {
-  background-color: #fff;
-  padding: 10px 0;
-}
-
-.nav-mobile ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-mobile ul li {
-  padding: 10px 20px;
-  border-top: 1px solid #ddd;
-}
-
-.nav-mobile ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  display: block;
-}
-
-@media (max-width: 768px) {
   .nav-desktop {
     display: none;
   }
 
   .nav-mobile-toggle {
     display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
   }
 
-  .hidden {
-    display: none !important;
+  .nav-mobile {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
   }
-}
+  .nav-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2.5rem;
   }
-  @media (max-width: 768px) {
-  .logo img {
-    height: 50px;
+  .nav-mobile ul li {
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
   }
-
-  .hotline {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
+  .nav-mobile ul li a {
+    text-decoration: none;
+    color: #000;
   }
-
-  .hero {
-    padding: 60px 20px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero h2 {
-    font-size: 18px;
-  }
-
-  .pricing {
-    padding: 40px 20px;
-  }
-
-  .services {
-    padding: 40px 20px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-logo {
-    height: 60px;
-  }
-
-  .partner-title {
-    font-size: 20px;
-  }
-
-  .partner-carousel {
-    flex-direction: column;
-  }
-
-  .partner-arrow {
+  .mobile-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
     display: none;
   }
-}
-@media (min-width: 769px) {
-  .nav-mobile-toggle {
-    display: none !important;
+  .nav-mobile.show {
+    left: 0;
   }
+  .mobile-overlay.show {
+    display: block !important;
+  }
+  .mobile-close {
+    font-size: 1.5rem;
+    text-align: right;
+    cursor: pointer;
+  }
+}
 
+/* Desktop only */
+@media (min-width: 769px) {
+  .nav-mobile-toggle,
   .nav-mobile {
     display: none !important;
   }
 }
-  
-/* Sidebar Mobile Menu & Overlay */
-.nav-mobile {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  height: 100%;
-  background-color: white;
-  box-shadow: 2px 0 6px rgba(0,0,0,0.2);
-  padding: 20px;
-  transition: left 0.3s ease;
-  z-index: 1000;
-}
-.nav-mobile ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 40px;
-}
-.nav-mobile ul li {
-  padding: 15px 20px;
-  border-bottom: 1px solid #ddd;
-  font-weight: bold;
-}
-.nav-mobile ul li a {
-  text-decoration: none;
-  color: #000;
-}
-.mobile-close {
-  font-size: 26px;
-  text-align: right;
-  cursor: pointer;
-}
-.mobile-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 999;
-}
-.nav-mobile.show {
-  left: 0;
-}
-.mobile-overlay.show {
-  display: block !important;
-}
-.mobile-overlay.hidden {
-  display: none;
-}
 
-
-@media (max-width: 768px) {
-  .partner-carousel {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .partner-logos {
-    overflow-x: auto;
-    width: 100%;
-    padding-left: 10px;
-  }
-
-  .partner-arrow {
-    display: none;
-  }
-
-  .partner-title {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 10px;
-  }
-}
-
-
-.partner-logos {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-.partner-logos::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
-
-@media (max-width: 768px) {
-  .partner-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 12px;
-    gap: 16px;
-  }
-
-  .partner-title {
-    font-size: 20px;
-    margin-bottom: 8px;
-    text-align: left;
-  }
-
-  .partner-carousel {
-    width: 100%;
-    overflow-x: auto;
-  }
-
-  .partner-logos {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding-left: 6px;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .partner-logos::-webkit-scrollbar {
-    display: none;
-  }
-
-  .partner-logos img {
-    height: 52px;
-    padding: 4px 6px;
-    border-radius: 8px;
-  }
-
-  .partner-arrow {
-    display: none;
-  }
-}
 
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -791,7 +619,7 @@
       <h4 id="#lien-he">Thông tin liên hệ</h4>
       <ul>
         <li><strong>Kho Hàng:</strong></li>
-        <li>Địa Chỉ: 67B Đường T5, P. Tây Thạnh, Q. Tân Phú, TP HCM</li>
+        <li>Địa Chỉ:55 Trương Quốc Dung, Phường Phú Nhuận, TP. HCM</li>
         <li>Hotline:0343599380(Mr.Giang)</li>
         <li>Email: <a href="mailto:inforinfotglexp@gmail.com">infotglexp@gmail.com</a></li>
         <li>Website: <a href="https://kitewayexpress.com" target="_blank">www.abc.com</a></li>
