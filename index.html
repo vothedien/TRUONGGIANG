@@ -340,7 +340,6 @@ body {
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .header,
-  .hotline,
   .hero,
   .pricing,
   .services,
@@ -348,10 +347,29 @@ body {
   .footer-middle {
     padding: 1.25rem;
   }
-
-  .logo img {
-    height: 50px;
+ .logo img {
+    height: 80px; /* tăng từ 50px → 80px hoặc tùy ý */
   }
+
+  .hotline {
+    padding: 8px 16px;
+    flex-direction: row; /* nếu đang là column thì đổi lại */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hotline-number {
+    font-size: 16px; /* giảm từ 20px */
+  }
+
+  .hotline-label {
+    font-size: 12px;
+  }
+
+  .hotline i {
+    font-size: 20px; /* icon cũng nhỏ lại */
+  }
+}
 
   .hero h1 {
     font-size: 1.75rem;
