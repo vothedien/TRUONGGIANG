@@ -1,39 +1,500 @@
-/* Nhập font Inter từ Google Fonts để có giao diện hiện đại và dễ đọc */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Import font Roboto từ Google Fonts (đã được đưa vào HTML) */
+/* font-family: 'Roboto', sans-serif; */
+
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* Đảm bảo cuộn mượt mà khi nhấp vào các liên kết điều hướng */
-html {
-    scroll-behavior: smooth;
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Các animation tùy chỉnh */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+.main-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Thêm padding ngang để nội dung không bị dính vào mép */
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Phần logo và hotline */
+.header-left {
+    display: flex;
+    align-items: center;
 }
 
-@keyframes bounceOnce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+.logo img {
+    height: 100px; /* Điều chỉnh chiều cao của logo */
+    margin-right: 30px; /* Khoảng cách giữa logo và hotline */
 }
 
-.animate-fade-in-down {
-    animation: fadeInDown 1s ease-out forwards;
+/* Nếu bạn dùng text cho logo, bỏ comment đoạn này */
+/*
+.logo-text-kiteway {
+    font-size: 2em;
+    font-weight: 700;
+    color: #007bff; // Màu xanh
 }
 
-.animate-fade-in-up {
-    animation: fadeInUp 1s ease-out forwards;
+.logo-text-express {
+    font-size: 2em;
+    font-weight: 700;
+    color: #dc3545; // Màu đỏ
+}
+*/
+/* Hotline */
+.hotline {
+    display: flex;
+    align-items: center;
+    background-color: #e6f0ff; /* Màu nền nhẹ cho hotline */
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-right: 20px; /* Khoảng cách giữa hotline và menu */
 }
 
-.animate-bounce-once {
-    animation: bounceOnce 0.5s ease-in-out;
+.hotline i {
+    color: #124178; /* Màu xanh cho icon điện thoại */
+    font-size: 1.5em;
+    margin-right:20px;
+}
+
+.hotline .phone-number {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #124178; /* Màu xanh cho số điện thoại */
+    display: block; /* Đảm bảo mỗi dòng một hàng */
+}
+
+.hotline .hotline-text {
+    font-size: 0.8em;
+    color: #130272;
+    display: block;
+}
+
+/* Menu điều hướng */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px; /* Khoảng cách giữa các mục menu */
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333; /* Màu chữ menu */
+    font-weight: 500; /* Độ đậm vừa phải */
+    font-size: 0.8em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #124178; /* Màu chữ khi hover */
+}
+
+/* Icon tìm kiếm */
+.search-icon i {
+    font-size: 1.2em;
+    color: #555;
+    cursor: pointer;
+    margin-left: 30px; /* Khoảng cách từ menu đến icon tìm kiếm */
+}
+
+.search-icon i:hover {
+    color: #007bff;
+}
+
+
+/*nhap*/
+/* --- Footer Styles --- */
+.main-footer {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Footer Top Section */
+.footer-top {
+    background-color: #f0f0f0; /* Màu nền xám nhạt */
+    padding: 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+}
+
+.footer-top-item {
+    flex: 1; /* Mỗi item sẽ chiếm một phần bằng nhau */
+    margin: 10px 15px; /* Khoảng cách giữa các mục */
+    min-width: 200px; /* Đảm bảo các mục không quá nhỏ */
+}
+
+.footer-top-item.logo-area {
+    /* Logo có thể nhỏ hơn */
+    flex: 0.8; /* Có thể chiếm ít không gian hơn các mục khác */
+}
+
+.footer-top-item p {
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Logo trong footer top */
+.footer-top-item .logo-area img {
+    
+    display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+}
+
+/* Nếu bạn dùng text cho logo footer, bỏ comment đoạn này */
+/*
+.footer-logo-text-kiteway {
+    font-size: 2em;
+    font-weight: 700;
+    color: #007bff; // Màu xanh
+}
+.footer-logo-text-express {
+    font-size: 2em;
+    font-weight: 700;
+    color: #dc3545; // Màu đỏ
+}
+*/
+
+/* Newsletter form */
+.newsletter p {
+    font-size: 1em;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.newsletter-form {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden; /* Đảm bảo input và button nằm trong border */
+}
+
+.newsletter-form input[type="email"] {
+    border: none;
+    padding: 10px 15px;
+    flex-grow: 1;
+    font-size: 0.9em;
+    outline: none; /* Bỏ viền khi focus */
+}
+
+.newsletter-form button {
+    background-color: #333; /* Màu nền nút */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #007bff; /* Màu xanh khi hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    background-color: #2c3e50; /* Màu xanh đậm giống hình */
+    padding: 40px 0;
+    color: #fff; /* Màu chữ trắng */
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Cho phép các cột xuống dòng trên màn hình nhỏ */
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 15px; /* Khoảng cách giữa các cột */
+    min-width: 180px; /* Đảm bảo các cột không quá hẹp */
+    margin-bottom: 20px; /* Khoảng cách dưới cùng cho responsive */
+}
+
+.footer-column h4 {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #f0f0f0; /* Màu tiêu đề hơi nhạt hơn */
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ccc; /* Màu chữ link nhạt hơn */
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #fff; /* Màu chữ link khi hover */
+}
+
+.footer-column.contact-details p {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.footer-column.contact-details p strong {
+    color: #fff; /* Chữ đậm màu trắng rõ hơn */
+}
+.footer-bottommm {
+  padding: 0.75% 2%; /* 👈 giảm chiều cao đáy */
+  background-color: #2534bd;
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+.footer-bottommm-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-icons i {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+/* Responsive cho Footer */
+@media (max-width: 992px) {
+    .footer-top .container,
+    .footer-bottom .container {
+        flex-direction: column; /* Xếp chồng các mục/cột */
+        align-items: center; /* Căn giữa */
+        text-align: center;
+    }
+
+    .footer-top-item,
+    .footer-column {
+        margin: 15px 0; /* Tăng khoảng cách theo chiều dọc */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        min-width: unset; /* Bỏ giới hạn min-width */
+    }
+
+    .newsletter-form {
+        max-width: 350px; /* Giới hạn chiều rộng form */
+        margin: 0 auto;
+    }
+
+    .footer-column ul {
+        padding-left: 0; /* Bỏ padding mặc định của ul */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-top-item p,
+    .newsletter p,
+    .footer-column p,
+    .footer-column ul li a {
+        font-size: 0.85em; /* Giảm cỡ chữ trên màn hình rất nhỏ */
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        padding: 8px 10px;
+    }
+}
+/* Responsive cơ bản */
+@media (max-width: 992px) {
+    .main-nav ul li {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-wrap: wrap; /* Cho phép các mục xuống dòng */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-left, .main-nav, .search-icon {
+        margin-bottom: 15px;
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        justify-content: center; /* Căn giữa nội dung */
+    }
+
+    .logo, .hotline {
+        margin: 0 10px; /* Giảm khoảng cách */
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-nav ul li {
+        margin: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hotline {
+        flex-direction: column;
+        text-align: center;
+        padding: 5px 10px;
+    }
+    .hotline i {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .hotline .phone-number, .hotline .hotline-text {
+        font-size: 1em;
+    }
+    .hotline .hotline-text {
+        font-size: 0.7em;
+    }
+}
+
+/* --- Advantages Section Styles --- */
+.advantages-section {
+    background-color: #f6f7fa; /* Màu nền xám nhạt */
+    padding: 60px 0; /* Khoảng cách trên dưới */
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+.advantages-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5em; /* Kích thước tiêu đề lớn */
+    font-weight: 700; /* In đậm */
+    color: #333; /* Màu chữ tiêu đề */
+    margin-bottom: 50px; /* Khoảng cách dưới tiêu đề */
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 cột trên màn hình lớn, tự động xuống dòng */
+    gap: 30px; /* Khoảng cách giữa các thẻ ưu điểm */
+}
+
+.advantage-item {
+    background-color: #fff; /* Nền trắng cho mỗi thẻ */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Đổ bóng nhẹ */
+    text-align: left; /* Căn lề trái cho nội dung thẻ */
+    display: flex; /* Dùng flexbox để căn chỉnh icon và text */
+    flex-direction: column; /* Xếp icon, tiêu đề, mô tả theo cột */
+    align-items: flex-start; /* Căn icon và text sang trái */
+    transition: transform 0.3s ease; /* Hiệu ứng hover */
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px); /* Nâng nhẹ lên khi hover */
+}
+
+.advantage-icon {
+    width: 80px; /* Kích thước của vùng chứa icon */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Khoảng cách dưới icon */
+    /* background-color: #e6f0ff; /* Ví dụ màu nền cho icon nếu cần */
+    /* border-radius: 50%; /* Nếu muốn icon hình tròn */
+}
+
+.advantage-icon img {
+    max-width: 100%; /* Đảm bảo icon nằm gọn trong vùng chứa */
+    height: auto;
+}
+
+.advantage-item h3 {
+    font-size: 1.3em;
+    font-weight: 600; /* Hơi đậm */
+    color: #333;
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề ưu điểm */
+}
+
+.advantage-item p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive cho phần ưu điểm */
+@media (max-width: 992px) {
+    .advantages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2 cột trên màn hình tablet */
+    }
+
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .advantages-grid {
+        grid-template-columns: 1fr; /* 1 cột trên màn hình di động */
+    }
+
+    .advantage-item {
+        margin: 0 auto; /* Căn giữa thẻ khi chỉ có 1 cột */
+        max-width: 400px; /* Giới hạn chiều rộng thẻ trên mobile */
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .advantages-section {
+        padding: 40px 0;
+    }
+
+    .advantage-item h3 {
+        font-size: 1.2em;
+    }
+
+    .advantage-item p {
+        font-size: 0.9em;
+    }
 }
