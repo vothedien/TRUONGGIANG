@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TGL Transport & Logistics</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
  <style>
 /* Thiết lập chung */
 html {
@@ -16,60 +20,13 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: ' Roboto',
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-/* Header */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 2% 3%;
-  flex-wrap: wrap;
-}
-.logo {
-  width: 15%;
-  min-width: 100px;
-}
-.logo img {
-  width: 100%;
-  height: auto;
-  max-width: 160px;
-  min-width: 100px;
-}
 
-/* Hotline */
-.hotline {
-  display: flex;
-  align-items: center;
-  background-color: #f2f6fb;
-  padding: 1% 3%;
-  width: 20%;
-}
-.hotline i {
-  font-size: 150%;
-  margin-right: 2%;
-  color: #1e2a78;
-}
-.hotline-info {
-  display: flex;
-  flex-direction: column;
-}
-.hotline-number {
-  color: #1e2a78;
-  font-weight: bold;
-  font-size: 120%;
-}
-.hotline-label {
-  color: #888;
-  font-weight: bold;
-  font-size: 90%;
-}
 
 /* Nav */
 .nav-desktop {
@@ -82,7 +39,7 @@ body {
 .nav-desktop ul {
   list-style: none;
   display: flex;
-  gap: 2.5%;
+  gap: 2%;
   padding: 0;
   margin: 0;
 }
@@ -107,7 +64,7 @@ body {
 
 /* Hero */
 .hero {
-  background-color: #345678;
+  background-color: #124178;
   color: white;
   padding: 6% 5%;
   text-align: center;
@@ -140,13 +97,13 @@ body {
 }
 .pricing-box {
   background: #fff;
-  padding: 20px;
+  padding: 5px;
   border-radius: 5%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: left;
 }
 .pricing-box img {
-  width: 10%;
+  width: 20%;
   height: auto;
   margin-bottom: 3%;
 }
@@ -184,7 +141,7 @@ body {
 }
 .service-box img {
   width: 100%;
-  height: auto;
+  height: 300px;
   display: block;
 }
 .service-box h3 {
@@ -212,13 +169,13 @@ body {
   flex-wrap: wrap;
 }
 .partner-title {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #1e2a78;
   max-width: 70%;
   text-align: left;
   margin: 0;
-  padding-right: 26%;
+  padding-right: 1%;
 }
 .partner-carousel {
   display: flex;
@@ -258,100 +215,6 @@ body {
   background-color: #ddd;
 }
 
-/* Footer */
-.footer-new {
-  background-color: #0d1a8a;
-  color: white;
-  font-size: 0.8125rem; /* ~13px */
-  line-height: 1.4;
-}
-
-.footer-top {
-  padding: 0.5% 2%;
-  background-color: #c7c7ca;
-}
-
-
-.footer-logo-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-logo {
-  width: 80px;
-  height: auto;
-}
-
-.newsletter-form {
-  display: flex;
-  border-bottom: 1px solid #000;
-  padding-bottom: 4px;
-}
-
-.newsletter-form input {
-  border: none;
-  outline: none;
-  flex: 1;
-  background: transparent;
-}
-
-.newsletter-form button {
-  background: none;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.footer-middle {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2%;
-  padding: 1.5% 2%; /* 👈 giảm từ 5% xuống */
-  justify-content: space-between;
-}
-
-.footer-column {
-  width: 18%;
-  min-width: 160px;
-  margin-bottom: 1%;
-}
-
-.footer-column h4 {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-.footer-column ul li {
-  margin-bottom: 0.25rem;
-  font-size: 0.8rem;
-}
-
-
-
-
-.footer-new a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-new a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  padding: 0.75% 2%; /* 👈 giảm chiều cao đáy */
-  background-color: #08105c;
-  font-size: 0.75rem;
-  color: #ccc;
-}
-
-.footer-bottom-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
 .social-icons i {
   font-size: 1rem;
@@ -503,7 +366,7 @@ body {
   }
 
   .partner-carousel {
-    flex-direction: column;
+    flex-direction: row-reverse;
     max-width: 100%;
     padding-right: 1%;
     
@@ -528,26 +391,38 @@ body {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="logo.jpg" alt="TGL Transport & Logistics">
-    </div>
-    <div class="hotline">
-      <i class="fas fa-phone-alt"></i>
-      <div class="hotline-info">
-        <span class="hotline-number">0343599380</span>
-        <span class="hotline-label">Hotline tư vấn</span>
-      </div>
-    </div>
-    <nav class="nav-desktop">
-      <ul id="menu">
-  <li><a href="#gioi-thieu">GIỚI THIỆU</a></li>
-<li><a href="#dich-vu">DỊCH VỤ</a></li>
-<li><a href="#uu-diem">ƯU ĐIỂM</a></li>
-<li><a href="#lien-he">LIÊN HỆ</a></li>
-</ul>
-
-      <i class="fas fa-search search-icon"></i>
+   <header class="main-header">
+        <div class="container">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="https://www.facebook.com/tgltrans/">
+                        <img src="logo.jpg" alt="TGL Transport & Logistics Logo">
+                        </a>
+                </div>
+                <div class="hotline">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <span class="phone-number">0343599380</span>
+                        <span class="hotline-text">Hotline tư vấn</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#gioi-thieu">GIỚI THIỆU</a></li>
+                    <li><a href="#dich-vu">DỊCH VỤ</a></li>
+                    <li><a href="#">GÓI VẬN CHUYỂN</a></li>
+                    <li><a href="#">BẢNG GIÁ</a></li>
+                    <li><a href="#">TIN TỨC</a></li>
+                    <li><a href="#">TUYỂN DỤNG</a></li>
+                    <li><a href="#lien-he">LIÊN HỆ</a></li>
+                     <li><a href="#uu-diem">ƯU ĐIỂM</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
     </nav>
     <div class="nav-mobile-toggle" onclick="toggleMobileMenu()">
   <i class="fas fa-bars"></i>
@@ -567,61 +442,74 @@ body {
   </header>
 
   <section class="hero" id="gioi-thieu">
-    <h1>TGL TRANSPORT & LOGISTICS</h1>
+    <h1>TGL TRANSPORT </h1>
     <h2>Global Shipping Solutions – Air & Sea</h2>
   </section>
 
-  <section class="pricing" id="uu-diem">
-    <h2>Ưu điểm của TGL Transport & Logistics</h2>
-    <div class="pricing-grid">
-      <div class="pricing-box">
-        <img src="uytin.png" alt="Uy tín">
-        <h3>Trao uy tín, sự chân thành và chuyên nghiệp</h3>
-        <p>Hàng hóa được đóng gói rất cẩn thận, chắc chắn.</p>
-      </div>
-      <div class="pricing-box">
-        <img src="giaonhan.png" alt="Door to door">
-        <h3>Hỗ trợ giao nhận hàng Door-to-door</h3>
-        <p>Với chi phí linh hoạt, cùng nhiều ưu đãi hấp dẫn.</p>
-      </div>
-      <div class="pricing-box">
-        <img src="theodoi.png" alt="Theo dõi đơn hàng">
-        <h3>Theo dõi đơn hàng đến tận tay người nhận</h3>
-        <p>Cho phép theo dõi tình trạng đơn hàng mọi lúc, mọi nơi.</p>
-      </div>
-      <div class="pricing-box">
-        <img src="quocgia.png" alt="220 quốc gia">
-        <h3>Vận chuyển đến hơn 220 Quốc gia</h3>
-        <p>Đáp ứng tối đa nhu cầu chuyển phát nhanh quốc tế.</p>
-      </div>
-      <div class="pricing-box">
-        <img src="nhieunam.png" alt="Kinh nghiệm">
-        <h3>Nhiều năm kinh nghiệm trong ngành</h3>
-        <p>Cam kết đảm bảo chất lượng từ quy trình đóng gói...</p>
-      </div>
-      <div class="pricing-box">
-        <img src="linhhoat.png" alt="Chi phí linh hoạt">
-        <h3>Chi phí cạnh tranh, giá trị và linh hoạt</h3>
-        <p>Chịu trách nhiệm giải quyết mọi vấn đề phát sinh (nếu có).</p>
-      </div>
+ <section class="advantages-section">
+    <div class="container">
+        <h2 class="section-title">Ưu điểm của TGL TRANSPORT</h2>
+        <div class="advantages-grid">
+            <div class="advantage-item">
+                <div class="advantage-icon">
+                    <img src="uytin.png" alt="Icon uy tín">
+                    </div>
+                <h3>Trao uy tín, sự chân thành và chuyên nghiệp</h3>
+                <p>Hàng hóa được đóng gói rất cẩn thận, chắc chắn.</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">
+                    <img src="giaonhan.png" alt="Icon Door-to-door">
+                </div>
+                <h3>Hỗ trợ giao nhận hàng Door-to-door</h3>
+                <p>Với chi phí linh hoạt, cùng nhiều ưu đãi hấp dẫn.</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">
+                    <img src="theodoi.png" alt="Icon Theo dõi">
+                </div>
+                <h3>Theo dõi đơn hàng đến tận tay người nhận</h3>
+                <p>Cho phép theo dõi tình trạng đơn hàng mọi lúc, mọi nơi.</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">
+                    <img src="quocgia.png" alt="Icon Toàn cầu">
+                </div>
+                <h3>Vận chuyển đến hơn 220 Quốc gia</h3>
+                <p>Đáp ứng tốt đa nhu cầu chuyển phát nhanh quốc tế.</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">
+                    <img src="nhieunam.png" alt="Icon Kinh nghiệm">
+                </div>
+                <h3>8+ Năm kinh nghiệm trong ngành</h3>
+                <p>Cam kết đảm bảo chất lượng từ quy trình đóng gói đến vận chuyển hàng hóa.</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">
+                    <img src="linhhoat.png" alt="Icon Chi phí">
+                </div>
+                <h3>Chi phí cạnh tranh, giá trị và linh hoạt</h3>
+                <p>Chịu trách nhiệm giải quyết mọi vấn đề phát sinh (nếu có).</p>
+            </div>
+        </div>
     </div>
-  </section>
-
+</section>
   <section class="services" id="dich-vu">
     <h2>GÓI VẬN CHUYỂN TẠI TGL</h2>
     <div class="service-grid">
       <div class="service-box">
-        <img src="uc.jpg" alt="Gửi hàng đi Úc">
+        <img src="Australia.jfif" alt="Gửi hàng đi Úc">
         <h3>GÓI GỬI HÀNG ĐI ÚC</h3>
         <button>Chi tiết</button>
       </div>
       <div class="service-box">
-        <img src="my.jpg" alt="Gửi hàng đi Mỹ">
+        <img src="myy.jpg" alt="Gửi hàng đi Mỹ">
         <h3>GÓI GỬI HÀNG ĐI MỸ</h3>
         <button>Chi tiết</button>
       </div>
       <div class="service-box">
-        <img src="cânda.jpg" alt="Gửi hàng đi Châu Âu">
+        <img src="chauau.jpg" alt="Gửi hàng đi Châu Âu">
         <h3>GÓI GỬI HÀNG ĐI CHÂU ÂU</h3>
         <button>Chi tiết</button>
       </div>
@@ -645,70 +533,85 @@ body {
     <button class="partner-arrow right" onclick="scrollPartner(1)">&#10095;</button>
   </div>
 </div>
-<footer class="footer-new">
-  <div class="footer-top">
-    <div class="footer-logo-info">
-      <img src="logo.jpg" alt="KITEWAY EXPRESS" class="footer-logo">
-      <div class="footer-contact-top">
-        <p><strong>Email:</strong> infotglexp@gmail.com</p>
-        <p><strong>Whatsapp:</strong> 0343599380</p>
-        <p>Built in Ho Chi Minh</p>
-      </div>
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-top-item logo-area">
+                <a href="#">
+                    <img src="TGL TRANS (7).png" alt="tgltransport LOGO" width="150px" height="150px">
+                    </a>
+            </div>
+            <div class="footer-top-item contact-info-top">
+                <p><strong>infotglexp@gmail.com</strong></p>
+                <p><strong>03435993805</strong></p>
+            </div>
+            <div class="footer-top-item contact-info-top">
+                <p>WHATSAPP:<strong> 0343599380</strong></p>
+                <p><strong> Built in Ho Chi Minh</strong></p>
+            </div>
+            <div class="footer-top-item newsletter">
+                <p><strong> Đăng ký nhận tin</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Vui lòng nhập Email của bạn">
+                    <button>ĐĂNG KÝ</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="footer-middle">
-    <div class="footer-column">
-      <h4>Dịch vụ</h4>
-      <ul>
-        <li><a href="#">Mở tài khoản DHL</a></li>
-        <li><a href="#">Gửi hàng hóa quốc tế</a></li>
-        <li><a href="#">Thông quan hàng nhập</a></li>
-      </ul>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-column">
+                <h4>Dịch vụ</h4>
+                <ul>
+                    <li><a href="#">Mở tài khoản DHL</a></li>
+                    <li><a href="#">Gửi hàng hóa quốc tế</a></li>
+                    <li><a href="#">Thông quan hàng nhập</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Về tgltransport</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Dịch vụ</a></li>
+                    <li><a href="#">Hỗ trợ</a></li>
+                    <li><a href="#">Tin tức Sự kiện</a></li>
+                    <li><a href="#">Bảng giá dịch vụ</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Ưu đãi</h4>
+                <ul>
+                    <li><a href="#">Tư vấn dịch vụ</a></li>
+                    <li><a href="#">Lịch bay tháng 03.2025</a></li>
+                    <li><a href="#">Thanh toán trên App</a></li>
+                    <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                    <li><a href="#">Ưu đãi dành cho đại lý</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Chính sách</h4>
+                <ul>
+                    <li><a href="#">Chính sách Bảo Hành</a></li>
+                    <li><a href="#">Chính sách Đổi Trả</a></li>
+                    <li><a href="#">Chính sách Vận Chuyển</a></li>
+                    <li><a href="#">Chính sách Thanh Toán</a></li>
+                    <li><a href="#">Chính sách Bảo Mật</a></li>
+                </ul>
+            </div>
+            <div class="footer-column contact-details">
+                <h4>Thông tin liên hệ</h4>
+                <p><strong>Kho Hàng:</strong></p>
+                <p><strong>Địa Chỉ:</strong> </p>
+                <p><strong>Hotline:</strong>0343599380 (Mr.Giang)</p>
+                <p><strong>Email:</strong>infotglexp@gmail.com </p>
+                <p><strong>Website:</strong> <www class="tgltransport com"></www></p>
+            </div>
+        </div>
     </div>
-    <div class="footer-column">
-      <h4>Về TGL TRANSPORT</h4>
-      <ul>
-        <li><a href="#gioi-thieu">Giới thiệu</a></li>
-        <li><a href="#dich-vu">Dịch vụ</a></li>
-        <li><a href="#ho-tro">Hỗ trợ</a></li>
-        <li><a href="#tin-tuc">Tin tức Sự kiện</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h4>Ưu đãi</h4>
-      <ul>
-        <li><a href="#">Tư vấn dịch vụ</a></li>
-        <li><a href="#">Lịch bay tháng 03.2025</a></li>
-        <li><a href="#">Thanh toán trên App</a></li>
-        <li><a href="#">Hướng dẫn đặt hàng</a></li>
-        <li><a href="#">Ưu đãi dành cho đại lý</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h4>Chính sách</h4>
-      <ul>
-        <li><a href="#">Chính Sách Bảo Hành</a></li>
-        <li><a href="#">Chính Sách Đổi Trả</a></li>
-        <li><a href="#">Chính Sách Vận Chuyển</a></li>
-        <li><a href="#">Chính Sách Thanh Toán</a></li>
-        <li><a href="#">Chính Sách Bảo Mật</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h4 id="#lien-he">Thông tin liên hệ</h4>
-      <ul>
-        <li><strong>Kho Hàng:</strong></li>
-        <li>Địa Chỉ:55 Trương Quốc Dung, Phường Phú Nhuận, TP. HCM</li>
-        <li>Hotline:0343599380(Mr.Giang)</li>
-        <li>Email: <a href="mailto:inforinfotglexp@gmail.com">infotglexp@gmail.com</a></li>
-        <li>Website: <a href="https://kitewayexpress.com" target="_blank">www.abc.com</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="footer-bottom-bar">
+    <div class="footer-bottommm">
+    <div class="footer-bottommm-bar">
       <span>© 2025 by <strong>TGL TRANSPORT</strong>. All Rights Reserved.</span>
       <span>Design by theneid | Sitemaps</span>
       <div class="social-icons">
@@ -720,7 +623,6 @@ body {
     </div>
   </div>
 </footer>
-
 
   <script>
 
