@@ -64,8 +64,13 @@ body {
 
 /* Hero */
 .hero {
-  background-color: #124178;
-  color: white;
+  background-color: #1e2a78;
+  background-size:1180px; 
+  /*background-image: url('4k.jfif'); 
+    
+    background-position: center center; /* Căn giữa ảnh nền */
+   
+  color: rgb(255, 255, 255);
   padding: 6% 5%;
   text-align: center;
 }
@@ -411,7 +416,7 @@ body {
                 <ul>
                     <li><a href="#gioi-thieu">GIỚI THIỆU</a></li>
                     <li><a href="#dich-vu">DỊCH VỤ</a></li>
-                    <li><a href="#">GÓI VẬN CHUYỂN</a></li>
+                    <li><a href="#dich-vu">GÓI VẬN CHUYỂN</a></li>
                     <li><a href="#">BẢNG GIÁ</a></li>
                     <li><a href="#">TIN TỨC</a></li>
                     <li><a href="#">TUYỂN DỤNG</a></li>
@@ -441,12 +446,13 @@ body {
 </nav>
   </header>
 
-  <section class="hero" id="gioi-thieu">
-    <h1>TGL TRANSPORT </h1>
-    <h2>Global Shipping Solutions – Air & Sea</h2>
-  </section>
+  <section class="hero-banner">
+    <div class="hero-content">
+         
+    </div>
+</section>
 
- <section class="advantages-section">
+ <section class="advantages-section" id="uu-diem">
     <div class="container">
         <h2 class="section-title">Ưu điểm của TGL TRANSPORT</h2>
         <div class="advantages-grid">
@@ -482,7 +488,7 @@ body {
                 <div class="advantage-icon">
                     <img src="nhieunam.png" alt="Icon Kinh nghiệm">
                 </div>
-                <h3>8+ Năm kinh nghiệm trong ngành</h3>
+                <h3>5+ Năm kinh nghiệm trong ngành</h3>
                 <p>Cam kết đảm bảo chất lượng từ quy trình đóng gói đến vận chuyển hàng hóa.</p>
             </div>
             <div class="advantage-item">
@@ -533,8 +539,56 @@ body {
     <button class="partner-arrow right" onclick="scrollPartner(1)">&#10095;</button>
   </div>
 </div>
+<section class="about-section" id="gioi-thieu">
+    <div class="container">
+        <div class="about-content-wrapper">
+            <div class="about-image">
+                <img src="gt.jpg" alt="TGL TRANSPORT">
+            </div>
+            <div class="statistics-bar">
+                <div class="stat-item">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-text">Employee</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-text">Customer</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-text">Country</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-text">Years of Experience</span>
+                </div>
+            </div>
+            <div class="about-text-content">
+                <h2 class="about-title">Giới thiệu về TGL TRANSPORT </h2>
+                <p class="company-intro">
+                    CÔNG TY TNHH TGL TRANSPORT được thành lập vào năm 2021 với sứ mệnh cung cấp các dịch vụ vận chuyển quốc tế chuyên nghiệp, nhanh chóng và an toàn cho khách hàng cá nhân và doanh nghiệp.Với địa chỉ tại <strong>55 Trương Quốc Dung, Phường Phú Nhuận, TP. Hồ Chí Minh</strong>. Chúng tôi am hiểu sâu sắc các quy trình logistics, thủ tục hải quan quốc tế và luôn cập nhật kịp thời các quy định liên quan, nhằm đảm bảo mỗi lô hàng đều được xử lý chính xác và vận chuyển đến tay người nhận một cách hiệu quả nhất.
+                </p>
+                <h3 class="service-subtitle">Dịch vụ gửi hàng nhanh chóng và an toàn</h3>
+                <p class="service-description">
+                    Với đội ngũ nhân sự được đào tạo chuyên nghiệp, tận tâm và giàu kinh nghiệm, TGL TRANSPORT tự hào mang đến dịch vụ vận chuyển uy tín, thời gian giao hàng nhanh chóng, chi phí cạnh tranh và luôn đặt lợi ích khách hàng làm trung tâm. Trải qua quá trình phát triển, chúng tôi không ngừng cải tiến quy trình vận hành và ứng dụng công nghệ để nâng cao chất lượng dịch vụ.
+                </p>
+                 <div id="moreContent" class="hidden-content">
+                    <h3 class="service-subtitle">Lợi ích khi chọn TGL TRANSPORT</h3>
+                    <p>
+                    Ngoài các dịch vụ vận chuyển hàng hóa đi quốc tế, TGL TRANSPORT còn cung cấp dịch vụ hỗ trợ khách hàng theo dõi đơn hàng, cập nhật tiến độ giao nhận minh bạch qua Email, điện thoại hoặc các kênh liên lạc phổ biến khác. Mỗi kiện hàng đều được theo dõi chặt chẽ từ khi gửi đến khi giao thành công.                    
+                    </p>
+                    <p>
+                    TGL TRANSPORT luôn nỗ lực trở thành đối tác tin cậy, người bạn đồng hành đáng tin cậy của quý khách hàng trên hành trình kết nối hàng hóa ra toàn cầu.                    
+                    </p>
+                </div>
+                    <a href="#" class="btn-read-more" id="readMoreBtn">Xem thêm</a>            
+                </div>
+        </div>
+         
+    </div>
+</section>
 <footer class="main-footer">
-    <div class="footer-top">
+    <div class="footer-top" id="lien-he">
         <div class="container">
             <div class="footer-top-item logo-area">
                 <a href="#">
@@ -542,8 +596,8 @@ body {
                     </a>
             </div>
             <div class="footer-top-item contact-info-top">
-                <p><strong>infotglexp@gmail.com</strong></p>
-                <p><strong>03435993805</strong></p>
+                <p>Email: <strong>infotglexp@gmail.com</strong></p>
+                <p>SDT: <strong>0343599380</strong></p>
             </div>
             <div class="footer-top-item contact-info-top">
                 <p>WHATSAPP:<strong> 0343599380</strong></p>
@@ -603,10 +657,10 @@ body {
             <div class="footer-column contact-details">
                 <h4>Thông tin liên hệ</h4>
                 <p><strong>Kho Hàng:</strong></p>
-                <p><strong>Địa Chỉ:</strong> </p>
+                <p><strong>Địa Chỉ:</strong> 55 Trương Quốc Dung, Phường Phú Nhuận, TP. Hồ Chí Minh</p>
                 <p><strong>Hotline:</strong>0343599380 (Mr.Giang)</p>
                 <p><strong>Email:</strong>infotglexp@gmail.com </p>
-                <p><strong>Website:</strong> <www class="tgltransport com"></www></p>
+                <p><strong>Website:</strong> <www class="tgltransport com">tgltransport com</www></p>
             </div>
         </div>
     </div>
@@ -657,7 +711,28 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
     overlay.classList.add('hidden');
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const moreContent = document.getElementById('moreContent');
 
+    if (readMoreBtn && moreContent) { // Đảm bảo các phần tử tồn tại
+        readMoreBtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a> (ví dụ: nhảy lên đầu trang)
+
+            if (moreContent.classList.contains('hidden-content')) {
+                // Nếu đang ẩn, thì hiện ra
+                moreContent.classList.remove('hidden-content');
+                moreContent.classList.add('visible-content');
+                readMoreBtn.textContent = 'Thu gọn'; // Đổi chữ nút thành "Thu gọn"
+            } else {
+                // Nếu đang hiện, thì ẩn đi
+                moreContent.classList.remove('visible-content');
+                moreContent.classList.add('hidden-content');
+                readMoreBtn.textContent = 'Xem thêm'; // Đổi chữ nút thành "Xem thêm"
+            }
+        });
+    }
+});
 </script>
 </body>
 </html>

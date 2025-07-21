@@ -119,7 +119,76 @@ body {
     color: #007bff;
 }
 
+/* --- Advantages Section Styles --- */
+.advantages-section {
+    background-color: #f6f7fa; /* Màu nền xám nhạt */
+    padding: 60px 0; /* Khoảng cách trên dưới */
+    text-align: center; /* Căn giữa tiêu đề */
+}
 
+.advantages-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5em; /* Kích thước tiêu đề lớn */
+    font-weight: 700; /* In đậm */
+    color: #333; /* Màu chữ tiêu đề */
+    margin-bottom: 50px; /* Khoảng cách dưới tiêu đề */
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 cột trên màn hình lớn, tự động xuống dòng */
+    gap: 30px; /* Khoảng cách giữa các thẻ ưu điểm */
+}
+
+.advantage-item {
+    background-color: #fff; /* Nền trắng cho mỗi thẻ */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Đổ bóng nhẹ */
+    text-align: left; /* Căn lề trái cho nội dung thẻ */
+    display: flex; /* Dùng flexbox để căn chỉnh icon và text */
+    flex-direction: column; /* Xếp icon, tiêu đề, mô tả theo cột */
+    align-items: flex-start; /* Căn icon và text sang trái */
+    transition: transform 0.3s ease; /* Hiệu ứng hover */
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px); /* Nâng nhẹ lên khi hover */
+}
+
+.advantage-icon {
+    width: 80px; /* Kích thước của vùng chứa icon */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Khoảng cách dưới icon */
+    /* background-color: #e6f0ff; /* Ví dụ màu nền cho icon nếu cần */
+    /* border-radius: 50%; /* Nếu muốn icon hình tròn */
+}
+
+.advantage-icon img {
+    max-width: 100%; /* Đảm bảo icon nằm gọn trong vùng chứa */
+    height: auto;
+}
+
+.advantage-item h3 {
+    font-size: 1.3em;
+    font-weight: 600; /* Hơi đậm */
+    color: #333;
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề ưu điểm */
+}
+
+.advantage-item p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+}
 /*nhap*/
 /* --- Footer Styles --- */
 .main-footer {
@@ -156,7 +225,7 @@ body {
 
 .footer-top-item p {
     margin-bottom: 5px;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #555;
 }
 
@@ -295,6 +364,224 @@ body {
   font-size: 1rem;
   margin-left: 0.5rem;
 }
+/* --- About Section Styles --- */
+.about-section {
+    background-color: #fff;
+    padding: 80px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-content-wrapper {
+    display: grid; /* Chuyển sang Grid Layout */
+    grid-template-columns: 1fr 1fr; /* Mặc định 2 cột bằng nhau */
+    grid-template-rows: auto auto; /* 2 hàng tự động */
+    gap: 40px; /* Khoảng cách giữa các ô grid */
+    align-items: start; /* Căn trên đầu các mục */
+}
+
+.about-image {
+    grid-column: 1 / 2; /* Chiếm cột 1 */
+    grid-row: 1 / 2;     /* Chiếm hàng 1 */
+    position: relative;
+    padding-top: 40%; /* Tỉ lệ khung hình (ví dụ: 40% của chiều rộng container) */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-text-content {
+    grid-column: 2 / 3; /* Chiếm cột 2 */
+    grid-row: 1 / 3;     /* Chiếm cả hàng 1 và hàng 2, để nó có đủ không gian */
+    padding-left: 20px; /* Khoảng cách với ảnh */
+}
+
+
+.about-title {
+    font-size: 2.2em; /* Kích thước tiêu đề */
+    font-weight: 700;
+    color: #002e6d; /* Màu xanh đậm của tiêu đề */
+    margin-bottom: 25px; /* Khoảng cách dưới tiêu đề */
+    line-height: 1.3;
+}
+.statistics-bar {
+    grid-column: 1 / 2; /* Chiếm cột 1 */
+    grid-row: 2 / 3;     /* Chiếm hàng 2 */
+    display: grid;       /* Biến thanh thống kê thành Grid riêng */
+    grid-template-columns: repeat(2, 1fr); /* 2 cột bằng nhau trong thanh thống kê */
+    gap: 20px;           /* Khoảng cách giữa các mục thống kê */
+
+    background-color: #f8f8f8;
+    padding: 20px; /* Tăng padding để nó "to" hơn một chút */
+    border-radius: 8px;
+    margin-top: -20px; /* Điều chỉnh âm margin để kéo nó lên gần ảnh hơn */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    align-self: start; /* Căn chỉnh nó lên trên cùng của ô grid hàng 2 */
+}
+.stat-item {
+    text-align: center;
+    padding: 10px 0; /* Bỏ padding ngang nếu đã có gap */
+}
+stat-number {
+    font-size: 2em; /* Kích thước số lớn hơn một chút */
+    font-weight: 700;
+    color: #007bff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-text {
+    font-size: 0.9em;
+    color: #555;
+    font-weight: 500;
+}
+.company-intro,
+.service-description {
+    font-size: 1.05em; /* Kích thước chữ */
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px; /* Khoảng cách giữa các đoạn văn */
+    text-align: justify; /* Căn đều hai bên */
+}
+
+.service-subtitle {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.company-intro strong {
+    font-weight: 700; /* In đậm chữ trong đoạn văn */
+    color: #333; /* Có thể làm màu đậm hơn một chút */
+}
+
+.btn-read-more {
+    display: inline-block; /* Để có thể áp dụng padding và margin */
+    background-color: transparent; /* Nền trong suốt */
+    color: #007bff; /* Màu chữ xanh */
+    border: 1px solid #007bff; /* Viền xanh */
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    margin-top: 15px; /* Khoảng cách với đoạn văn trên */
+    transition: all 0.3s ease;
+}
+
+.btn-read-more:hover {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive cho phần giới thiệu */
+@media (max-width: 992px) {
+   .about-content-wrapper {
+        grid-template-columns: 1fr; /* Trên màn hình tablet, tất cả chỉ 1 cột */
+        grid-template-rows: auto auto auto; /* Ảnh, thống kê, nội dung sẽ xếp chồng */
+        gap: 30px; /* Giảm khoảng cách */
+    }
+
+    .about-image {
+        grid-column: 1 / -1; /* Ảnh chiếm toàn bộ chiều rộng */
+        grid-row: 1 / 2;
+        width: 80%; /* Giảm chiều rộng ảnh */
+        padding-top: 50%; /* Điều chỉnh tỉ lệ khung hình ảnh cho mobile */
+        margin: 0 auto; /* Căn giữa ảnh */
+    }
+
+    .statistics-bar {
+        grid-column: 1 / -1; /* Thống kê chiếm toàn bộ chiều rộng */
+        grid-row: 2 / 3;
+        margin-top: 0; /* Bỏ âm margin */
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr); /* Giữ 2 cột cho thống kê trên tablet */
+        max-width: 500px; /* Giới hạn chiều rộng để không quá rộng */
+        margin: 0 auto;
+    }
+
+    .about-text-content {
+        grid-column: 1 / -1; /* Nội dung chiếm toàn bộ chiều rộng */
+        grid-row: 3 / 4;
+        padding-left: 0; /* Bỏ padding bên trái */
+        padding: 0 10px; /* Thêm padding ngang */
+        text-align: center; /* Căn giữa văn bản */
+    }
+
+    .about-title, .service-subtitle {
+        text-align: center; /* Căn giữa tiêu đề */
+    }
+
+    .company-intro,
+    .service-description {
+        text-align: left; /* Để đoạn văn vẫn căn trái trên mobile */
+    }
+
+    .service-subtitle {
+        text-align: center; /* Căn giữa tiêu đề phụ */
+    }
+}
+/* CSS để ẩn nội dung ban đầu */
+.hidden-content {
+    display: none; /* Ẩn phần tử */
+    opacity: 0;    /* Làm mờ */
+    max-height: 0; /* Thu gọn chiều cao */
+    overflow: hidden; /* Ẩn phần tràn ra */
+    transition: opacity 0.5s ease-out, max-height 0.5s ease-out; /* Hiệu ứng chuyển động */
+}
+
+/* CSS khi nội dung được hiển thị */
+.visible-content {
+    display: block; /* Hiển thị phần tử */
+    opacity: 1;     /* Hiện rõ */
+    max-height: 1000px; /* Đặt một giá trị đủ lớn để chứa nội dung. Cần cân nhắc nếu nội dung quá dài. */
+}
+@media (max-width: 768px) {
+    .about-section {
+        padding: 50px 0;
+    }
+    .about-image {
+        width: 95%; /* Ảnh chiếm gần hết chiều rộng */
+    }
+    .about-title {
+        font-size: 1.8em;
+    }
+    .company-intro,
+    .service-description {
+        font-size: 0.95em;
+    }
+    .service-subtitle {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image {
+        padding-top: 60%; /* Tăng tỉ lệ khung hình ảnh cho màn hình nhỏ hơn */
+    }
+    .btn-read-more {
+        width: 100%; /* Nút xem thêm full chiều rộng */
+        text-align: center;
+    }
+}
 /* Responsive cho Footer */
 @media (max-width: 992px) {
     .footer-top .container,
@@ -385,78 +672,6 @@ body {
         font-size: 0.7em;
     }
 }
-
-/* --- Advantages Section Styles --- */
-.advantages-section {
-    background-color: #f6f7fa; /* Màu nền xám nhạt */
-    padding: 60px 0; /* Khoảng cách trên dưới */
-    text-align: center; /* Căn giữa tiêu đề */
-}
-
-.advantages-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section-title {
-    font-size: 2.5em; /* Kích thước tiêu đề lớn */
-    font-weight: 700; /* In đậm */
-    color: #333; /* Màu chữ tiêu đề */
-    margin-bottom: 50px; /* Khoảng cách dưới tiêu đề */
-}
-
-.advantages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 cột trên màn hình lớn, tự động xuống dòng */
-    gap: 30px; /* Khoảng cách giữa các thẻ ưu điểm */
-}
-
-.advantage-item {
-    background-color: #fff; /* Nền trắng cho mỗi thẻ */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Đổ bóng nhẹ */
-    text-align: left; /* Căn lề trái cho nội dung thẻ */
-    display: flex; /* Dùng flexbox để căn chỉnh icon và text */
-    flex-direction: column; /* Xếp icon, tiêu đề, mô tả theo cột */
-    align-items: flex-start; /* Căn icon và text sang trái */
-    transition: transform 0.3s ease; /* Hiệu ứng hover */
-}
-
-.advantage-item:hover {
-    transform: translateY(-5px); /* Nâng nhẹ lên khi hover */
-}
-
-.advantage-icon {
-    width: 80px; /* Kích thước của vùng chứa icon */
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px; /* Khoảng cách dưới icon */
-    /* background-color: #e6f0ff; /* Ví dụ màu nền cho icon nếu cần */
-    /* border-radius: 50%; /* Nếu muốn icon hình tròn */
-}
-
-.advantage-icon img {
-    max-width: 100%; /* Đảm bảo icon nằm gọn trong vùng chứa */
-    height: auto;
-}
-
-.advantage-item h3 {
-    font-size: 1.3em;
-    font-weight: 600; /* Hơi đậm */
-    color: #333;
-    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề ưu điểm */
-}
-
-.advantage-item p {
-    font-size: 0.95em;
-    color: #666;
-    line-height: 1.6;
-}
-
 /* Responsive cho phần ưu điểm */
 @media (max-width: 992px) {
     .advantages-grid {
@@ -495,6 +710,161 @@ body {
     }
 
     .advantage-item p {
+        font-size: 0.9em;
+    }
+}
+/* --- Hero Banner Section Styles --- */
+.hero-banner {
+    width: 100%;
+    height: 500px; /* Chiều cao của banner, bạn có thể điều chỉnh */
+    background-image: url('dau.jpg'); /* Thay thế bằng đường dẫn ảnh của bạn */
+    background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ khu vực */
+    background-position: center center; /* Căn giữa ảnh nền */
+    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    text-align: center; /* Căn giữa văn bản */
+    position: relative; /* Quan trọng cho overlay */
+    z-index: 1; /* Đảm bảo banner nằm trên cùng */
+    background-color: #130272;
+}
+
+/* Thêm lớp phủ mờ (overlay) để chữ dễ đọc hơn */
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Màu đen với độ trong suốt 40% */
+    z-index: 2; /* Đặt lớp phủ trên ảnh nhưng dưới chữ */
+}
+
+.hero-content {
+    position: relative; /* Đặt nội dung trên lớp phủ */
+    z-index: 3; /* Đảm bảo chữ nằm trên lớp phủ và ảnh */
+    color: #fff; /* Màu chữ trắng */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Thêm bóng chữ để dễ đọc hơn */
+}
+
+.hero-content h1 {
+    font-size: 4em; /* Kích thước chữ KITEWAY EXPRESS */
+    font-weight: 700;
+    margin-bottom: 15px; /* Khoảng cách dưới tiêu đề chính */
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.8em; /* Kích thước chữ GỬI HÀNG TOÀN THẾ GIỚI */
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Responsive cho Hero Banner */
+@media (max-width: 992px) {
+    .hero-banner {
+        height: 350px; /* Giảm chiều cao trên tablet */
+    }
+    .hero-content h1 {
+        font-size: 3em;
+    }
+    .hero-content p {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 300px; /* Giảm chiều cao trên mobile */
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        height: 250px;
+    }
+    .hero-content h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+}
+.statistics-bar {
+    display: flex;
+    justify-content: space-around; /* Phân bổ đều các mục */
+    align-items: center;
+    background-color: #f8f8f8; /* Nền nhẹ cho thanh thống kê */
+    padding: 20px 0;
+    border-radius: 8px;
+    margin-top: 40px; /* Khoảng cách từ nội dung trên */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Bóng nhẹ */
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px 15px;
+    flex: 1; /* Mỗi mục chiếm một phần bằng nhau */
+    min-width: 150px; /* Đảm bảo mỗi mục có đủ không gian */
+}
+
+.stat-number {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #007bff; /* Màu xanh nổi bật */
+    display: block; /* Đảm bảo nó nằm trên một dòng riêng */
+    margin-bottom: 5px;
+}
+
+.stat-text {
+    font-size: 1em;
+    color: #555;
+    font-weight: 500;
+    display: block;
+}
+
+/* Responsive cho Statistics Bar */
+@media (max-width: 992px) {
+    .statistics-bar {
+        margin-top: 30px;
+        flex-direction: row; /* Giữ hàng ngang nhưng có thể xuống dòng */
+        justify-content: center;
+    }
+    .stat-item {
+        margin: 10px 20px; /* Thêm khoảng cách khi các mục xuống dòng */
+    }
+}
+
+@media (max-width: 768px) {
+    .statistics-bar {
+        flex-direction: column; /* Xếp chồng các mục trên mobile */
+        align-items: center;
+        padding: 20px;
+    }
+    .stat-item {
+        width: 100%; /* Mỗi mục chiếm toàn bộ chiều rộng */
+        margin: 10px 0;
+        border-bottom: 1px solid #eee; /* Đường kẻ phân cách */
+        padding-bottom: 15px;
+    }
+    .stat-item:last-child {
+        border-bottom: none; /* Bỏ đường kẻ cuối cùng */
+        padding-bottom: 0;
+    }
+    .stat-number {
+        font-size: 1.8em;
+    }
+    .stat-text {
         font-size: 0.9em;
     }
 }
